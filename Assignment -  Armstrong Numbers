@@ -5,7 +5,7 @@ while True:  # kullanıcı rakamlardan oluşan bir girdi yazana kadar soruyu tek
   if int(sayı) == 1 or int(sayı) == 0:  # 1 ve 0 da Armstrong kabul edildiği için önce bu iki rakam olma ihtimaliyle sordum.
     print(f"{sayı} bir Armstrong sayıdır.")
     break
-  elif (not sayı.isdigit()) or "." in sayı or "," in sayı:  # rakam dışında girilebilecek alternatifleri ve 2 haneli sayıları eledim.
+  elif (not sayı.isdigit()) or "." in sayı or "," in sayı:  # rakam dışında girilebilecek alternatifleri eledim.
    print("Lütfen sadece pozitif sayı girin. Rakam harici, ondalıklı ya da negatif olmasın.")
   else:
     for i in sayı:
