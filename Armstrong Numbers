@@ -1,0 +1,21 @@
+while True:  # kullanıcı rakamlardan oluşan bir girdi yazana kadar soruyu tekrar soracak.
+  sayı = input("Lütfen pozitif bir tam sayı yazın: ")  # rakamdan başka karakter girme ihtimalini kontrol etmek için inputu hemen int'e çevirmedim.
+  toplam = 0
+  basamak = len(sayı)  # girilen sayının kaç basamaklı olduğunu kaydettim.
+  if int(sayı) == 1 or int(sayı) == 0:  # 1 ve 0 da Armstrong kabul edildiği için önce bu iki rakam olma ihtimaliyle sordum.
+    print(f"{sayı} bir Armstrong sayıdır.")
+    break
+  elif (not sayı.isdigit()) or "." in sayı or "," in sayı:  # rakam dışında girilebilecek alternatifleri ve 2 haneli sayıları eledim.
+   print("Lütfen sadece pozitif sayı girin. Rakam harici, ondalıklı ya da negatif olmasın.")
+  else:
+    for i in sayı:
+     toplam += int(i) ** basamak  # girilen sayı içerisindeki her rakamı basamak sayısını üs alarak çarptım ve onları toplayarak ilerledim.
+    if basamak == 1:  # 1 ve 0 dışındaki tek rakamlı sayılıarı da Armstrong değil diye kaydettim. bunu yapmazsam onlara da olumlu sonuç veriyor.
+      print(f"{sayı} bir Armstrong sayı değildir.")
+      break
+    elif int(sayı) == toplam:
+      print(f"{sayı} bir Armstrong sayıdır.")  # eğer yukarıda yaptığım işlem kullanıcının girdiği sayı ile aynıysa sonuç Armstrong olarak çıktı verdi.
+      break
+    else:
+      print(f"{sayı} bir Armstrong sayı değildir.")
+      break
