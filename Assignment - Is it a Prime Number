@@ -1,0 +1,11 @@
+number = int(input("Please write a number: "))
+
+if number > 1:  # asal sayı olması için birden büyük olması gerekli.
+  for i in range(2, number):
+    if number % i == 0:  # ikiden girilen sayıya kadar number değeri herhangi birine kalansız bölünebilirse sayı asal değildir.
+      print(f"{number} is not a prime number.")
+      break
+  else:
+      print(f"{number} is a prime number.")  
+else:
+  print(f"{number} is not a prime number.")  # girilen sayı birden küçükse direkt olarak asal değildir.
