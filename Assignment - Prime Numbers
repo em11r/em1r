@@ -1,0 +1,17 @@
+while True:  # kullanıcı rakamlardan oluşan bir girdi yazana kadar soruyu tekrar soracak.
+  sayı = input("Lütfen pozitif bir tam sayı yazın: ")  # rakamdan başka karakter girme ihtimalini kontrol etmek için inputu hemen int'e çevirmedim.
+  asal = []
+
+  if (not sayı.isdigit()) or "." in sayı or "," in sayı:  # rakam dışında girilebilecek alternatifleri eledim.
+    print("Lütfen sadece pozitif sayı girin. Rakam harici, ondalıklı ya da negatif olmasın.")
+  else:
+    for i in range(2, int(sayı) + 1):  # asal sayı olması için birden büyük olması gerekli, o nedenle range ikiden başladı.
+      kontrol = 0  #i'nin kendisinden küçük herhangi bir sayıya bölünüp bölünmediğini kontrol etmek için bir sabit.
+      for j in range(2, i):
+        if  i % j == 0:
+          kontrol = 1  # i eğer kendinden küçük bir sayıya bölünürse kontrol 1 oluyor ve döngü duruyor.
+          break
+      if kontrol == 0:  # i eğer kendinden küçük bir sayıya bölünmüyorsa kontrol 0 kalıyor ve i asal listesine ekleniyor.
+        asal.append(i)
+    print(asal)
+    break
