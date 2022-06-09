@@ -1,8 +1,8 @@
 fibonacci = []
-n1, n2 = 0, 1  # pozitif ilk iki rakamı başlangıç noktası aldım.
+n1, n2 = 1, 1  # soruda listede sıfır istenmediği için "0, 1" yerine sıradaki fibonacci ikilisi olan "1, 1" ile başladım.
 
 while n1 <= 55:
-  fibonacci.append(n1)  # sıfırı listeye ekleyerek başladım.
+  fibonacci.append(n1)  # biri listeye ekleyerek başladım.
   n1, n2 = n2, n1 + n2  # ekledikten sonra sırayı kaydırdım ki bir sonraki fibonacci sayısına geçebileyim ve son iki sayıyı toplayım.
 
 print(fibonacci)
