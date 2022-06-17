@@ -1,0 +1,12 @@
+letters = {}
+
+sentence = input("Plese enter your sentence: ").replace(" ", "")
+
+for i in sentence:
+  keys = letters.keys()
+  if i in keys:
+    letters[i] += 1
+  else:
+    letters[i] = 1
+
+print(letters)
