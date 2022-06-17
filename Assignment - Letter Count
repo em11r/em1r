@@ -1,6 +1,6 @@
 letters = {}
 
-sentence = input("Plese enter your sentence: ").replace(" ", "")
+sentence = input("Please enter your sentence: ").replace(" ", "")
 
 for i in sentence:
   keys = letters.keys()
